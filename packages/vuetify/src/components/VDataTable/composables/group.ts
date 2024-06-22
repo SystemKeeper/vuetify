@@ -161,9 +161,9 @@ function flattenItems <T extends GroupableItem> (items: readonly (T | Group<T>)[
         flatItems.push(item)
       }
 
-      if (opened.has(item.id) || item.value == null) {
-        flatItems.push(...flattenItems(item.items, opened))
-      }
+      // if (opened.has(item.id) || item.value == null) {
+      flatItems.push(...flattenItems(item.items, opened))
+      // }
     } else {
       flatItems.push(item)
     }
